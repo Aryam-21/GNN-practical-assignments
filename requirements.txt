@@ -1,0 +1,16 @@
+torch>=2.0
+torch_geometric>=2.4
+scikit-learn
+pandas
+numpy
+matplotlib
+networkx
+pytest
+jupyter
+pydantic>=2
+httpx
+uvicorn
+fastapi
+mlflow-skinny
+sqlalchemy
+alembic
