@@ -1,0 +1,21 @@
+name: ci
+on: [push, pull_request]
+jobs:
+  test-and-gate:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: assignment4
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install
+        run: |
+          pip install torch --index-url https://download.pytorch.org/whl/cpu
+          pip install -r requirements.txt
+      - name: Unit tests
+        run: pytest tests -q
+      - name: Promotion gate (non-zero exit => job fails => nothing is promoted)
+        run: python scripts/gate.py --epochs 100 --min-delta -0.02
