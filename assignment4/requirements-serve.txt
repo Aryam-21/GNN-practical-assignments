@@ -1,0 +1,5 @@
+torch_geometric>=2.4
+fastapi
+uvicorn
+pydantic>=2
+numpy
