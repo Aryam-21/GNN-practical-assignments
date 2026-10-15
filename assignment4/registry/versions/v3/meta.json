@@ -1,0 +1,30 @@
+{
+  "architecture": {
+    "name": "GCN",
+    "d_in": 1433,
+    "d_hid": 64,
+    "d_out": 7,
+    "dropout": 0.5
+  },
+  "preprocessing": "row_normalize: x / max(sum(x), 1)",
+  "feature_schema": {
+    "n_features": 1433,
+    "dtype": "float32",
+    "min_value": 0.0
+  },
+  "labels": [
+    "class_0",
+    "class_1",
+    "class_2",
+    "class_3",
+    "class_4",
+    "class_5",
+    "class_6"
+  ],
+  "dataset_id": "dc17322fedab",
+  "torch_version": "2.14.1+cpu",
+  "version": "v3",
+  "seed": 0,
+  "git_commit": "c362e4a",
+  "mlflow_run_id": "f7efbe1ad35340d18bb8d4a9079bc7ae"
+}

@@ -1,0 +1,58 @@
+{
+  "versions": {
+    "v1": {
+      "metrics": {
+        "val_acc": 0.5899999737739563
+      },
+      "run_id": "89e71c0eaf254628a8be07efe79b685e",
+      "gate": {
+        "candidate": 0.5899999737739563,
+        "approved": null,
+        "promote": true,
+        "reason": "PROMOTE: first model and above floor"
+      }
+    },
+    "v2": {
+      "metrics": {
+        "val_acc": 0.7860000133514404
+      },
+      "run_id": "f67ccb3fba634398b155f0b6f990fd1a",
+      "gate": {
+        "candidate": 0.7860000133514404,
+        "approved": 0.5899999737739563,
+        "promote": true,
+        "reason": "PROMOTE: 0.786 vs approved 0.590 (gain +0.196)"
+      }
+    },
+    "v3": {
+      "metrics": {
+        "val_acc": 0.8059999942779541
+      },
+      "run_id": "f7efbe1ad35340d18bb8d4a9079bc7ae",
+      "gate": {
+        "candidate": 0.8059999942779541,
+        "approved": 0.7860000133514404,
+        "promote": true,
+        "reason": "PROMOTE: 0.806 vs approved 0.786 (gain +0.020)"
+      }
+    },
+    "v4": {
+      "metrics": {
+        "val_acc": 0.41200000047683716
+      },
+      "run_id": "e49ed86e7ffd4f06a2e9668bf22d1f26",
+      "gate": {
+        "candidate": 0.41200000047683716,
+        "approved": 0.8059999942779541,
+        "promote": false,
+        "reason": "BLOCKED: regression 0.412 < approved 0.806"
+      }
+    }
+  },
+  "approved": "v3",
+  "history": [
+    "v1",
+    "v2",
+    "v3"
+  ]
+}
